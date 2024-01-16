@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="script.js"></script>
+        <title>Rock Paper Scissors Online</title>
+    </head>
+    <body>
+        <h1>Rock Paper Scissors</h1>
+        <h2>Instructions</h2>
+        <p id="instructionsMessage" style="display:none">Each round, you choose whether you will play rock, paper, or scissors. The computer will also make a randomly selected move. Rock crushes scissors, scissors cut paper, and paper covers rock.<br>You will play until either you or the computer reaches the number of points you specify. One point is given to the winner of each round, but no points are awarded for ties.<br>Good luck!</p>
+        <button id="instructionsButton" onClick="showInstructions()" style="display:block">Show Instructions</button>
+        
+        <h2>Let's Play!</h2>
+        <p id="roundMessage" style="display:none">Round: 1</p>
+        <p id="scorePMessage" style="display:none">Player's Score: 0</p>
+        <p id="scoreCMessage" style="display:none">Computer's Score: 0</p>
+        <p id="moveMessage" style="display:none">Choose one of the options below to make a move:</p>
+        <p id="outcomeMessage" style="display:none"></p>
+        <button id="rockButton" onClick="setMoveRock();game()" style="display:none">Rock</button>
+        <button id="paperButton" onClick="setMovePaper();game()" style="display:none">Paper</button>
+        <button id="scissorsButton" onClick="setMoveScissors();game()" style="display:none">Scissors</button>
+        <button id="nextGameButton" onClick="gameDisplay()" style="display:none">Next Game</button>
+
+        <label for="name" id="nameLabel" style="display:block">Name:</label>
+        <input type="text" id="name" name="name" style="display:block"><br><br>
+        <label for="points" id="pointsLabel" style="display:block">How many points would you like to play to:</label>
+        <input type="number" id="points" name="points" style="display:block"><br><br>
+        <button id="startGameButton" onClick="gameStart()" style="display:block">Start Game</button>
+    </body>
+</html>
+
